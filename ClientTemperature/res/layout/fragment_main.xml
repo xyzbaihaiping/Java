@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.temperature.MainActivity$PlaceholderFragment" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/wall" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/etServerIP"
+        android:layout_alignBottom="@+id/etServerIP"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="31dp"
+        android:text="IP："
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etServerIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView1"
+        android:layout_toLeftOf="@+id/etServerIP"
+        android:text="端口："
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etServerPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignLeft="@+id/etServerIP"
+        android:ems="5" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvClientStatus"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/etServerPort"
+        android:layout_alignBottom="@+id/etServerPort"
+        android:layout_toRightOf="@+id/etServerPort"
+        android:hint="等待连接"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editMessage"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/buttonStop"
+        android:layout_below="@+id/buttonConnect"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="       待发送信息" />
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_alignRight="@+id/tvClientStatus"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginRight="10dp"
+        android:background="#90ee90"
+        android:text="Link" />
+
+    <Button
+        android:id="@+id/buttonSentMessage"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/editMessage"
+        android:layout_toRightOf="@+id/editMessage"
+        android:background="#ffdab9"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/buttonSentMessage"
+        android:layout_alignTop="@+id/tvReceivedMessage"
+        android:layout_marginTop="8dp"
+        android:background="#add8e6"
+        android:text="Random" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_above="@+id/editMessage"
+        android:layout_alignLeft="@+id/TextView01"
+        android:background="#cd5c5c"
+        android:enabled="false"
+        android:text="Break" />
+
+    <TextView
+        android:id="@+id/tvReceivedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/editMessage"
+        android:layout_marginLeft="21dp"
+        android:hint="消息显示             "
+        android:lines="5"
+        android:textSize="20dp" />
+
+    <com.example.temperature.temperaturechart
+        android:id="@+id/temperaturechart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.temperature.MainActivity$PlaceholderFragment" >
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:scaleType="fitXY"
+        android:src="@drawable/wall2" />
+
+    <TextView
+        android:id="@+id/tvServerIP"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/textView1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/textViewip"
+        android:text="主机IP"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewip"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="7dp"
+        android:text="端口号:"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/edServerPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/tvServerIP"
+        android:ems="5"
+        android:text="8899"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/buttonSentMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/buttonStart"
+        android:layout_marginTop="7dp"
+        android:background="#ffdab9"
+        android:text="Send" />
+
+    <EditText
+        android:id="@+id/editMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonSentMessage"
+        android:layout_alignLeft="@+id/textViewip"
+        android:ems="10"
+        android:textSize="20dp"
+        
+        android:hint="待发送信息" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textReceiveMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editMessage"
+        android:layout_alignRight="@+id/editMessage"
+        android:layout_alignTop="@+id/button1"
+        android:hint="   消息显示        "
+        android:lines="5"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/buttonSentMessage"
+        android:layout_below="@+id/edServerPort"
+        android:layout_marginTop="18dp"
+        android:background="#90ee90"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSentMessage"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/textReceiveMessage"
+         android:background="#add8e6"
+        android:text="Receive" />
+
+
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonSentMessage"
+        android:layout_alignLeft="@+id/editMessage"
+        android:background="#cd5c5c"
+        android:enabled="false"
+        android:text="Stop" />
+
+        <ImageView
+            android:id="@+id/imageball"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignLeft="@+id/textReceiveMessage"
+            android:layout_alignTop="@+id/textReceiveMessage"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ball" />
+
+        <TextView
+            android:id="@+id/textViewip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/textView1"
+            android:layout_marginTop="12dp"
+            android:text="IP地址:"
+            android:textSize="25dp" />
+
+</RelativeLayout>
